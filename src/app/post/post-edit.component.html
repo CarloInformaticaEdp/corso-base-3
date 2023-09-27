@@ -1,12 +1,23 @@
-<div formGroupName="formGroup">
-  <h2>Post Edit</h2>
+<div *ngIf="!loading">
+  <div [formGroup]="formGroup" (ngReset)="OnReset()" (ngSubmit)="OnSubmit()">
+    <h2>Post Edit</h2>
 
-  <label for="id">id: </label>
-  <input id="id" type="text" formControlName="id" />
+    <label for="id">id: </label>
+    <input id="id" type="text" formControlName="id" />
+    <br />
 
-  <label for="title">title: </label>
-  <input id="title" type="text" formControlName="title" />
+    <label for="title">title: </label>
+    <input id="title" type="text" formControlName="title" />
+    <br />
 
-  <label for="body">body: </label>
-  <input id="body" type="text" formControlName="body" />
+    <label for="body">body: </label>
+    <input id="body" type="text" formControlName="body" />
+    <br />
+
+    <button type="submit" [disabled]="formGroup.invalid">
+      MANDA TUTTO JACK; MANDA TUTTO
+    </button>
+    <BR />
+    <button type="reset">CI STANNO TRACCIANDO, CI STANNO TRACCIANDO</button>
+  </div>
 </div>
