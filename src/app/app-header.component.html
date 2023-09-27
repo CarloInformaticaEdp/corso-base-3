@@ -1,0 +1,18 @@
+<p>
+  <button class="btn btn-info m-2" routerLink="/home">Home</button>
+  <button class="btn btn-info m-2" routerLink="/post/list">Post</button>
+  <button
+    class="btn btn-info m-2"
+    [hidden]="data?.username"
+    routerLink="/user/login"
+  >
+    Login
+  </button>
+  <button
+    class="btn btn-info m-2"
+    [hidden]="!data?.username"
+    (click)="logout()"
+  >
+    Logout
+  </button>
+</p>

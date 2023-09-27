@@ -1,0 +1,15 @@
+<div class="container">
+  <h3>State data:</h3>
+  <pre>{{ data | json }}</pre>
+
+  <h3>Pipe e Direttive:</h3>
+
+  <p>
+    <b>{{ myArray | appJoinPipe: separator | uppercase }}</b
+    ><br /><button class="btn btn-sm btn-info" (click)="separator = ' # '">
+      cambia
+    </button>
+  </p>
+
+  <p appHighlight="green">Passa il mouse qui sopra</p>
+</div>

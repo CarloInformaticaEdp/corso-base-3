@@ -1,0 +1,31 @@
+<div>
+  <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+    <div class="mb-2">
+      <input
+        type="text"
+        required
+        name="username"
+        [(ngModel)]="username"
+        placeholder="username"
+        class="form-control"
+      />
+    </div>
+    <div class="mb-2">
+      <input
+        type="password"
+        required
+        name="password"
+        minlength="5"
+        [(ngModel)]="password"
+        placeholder="password"
+        class="form-control"
+      />
+    </div>
+    <div>
+      <button type="submit" class="btn btn-success">Login</button>
+    </div>
+    <p *ngIf="error" class="text-danger">Controlla i dati</p>
+  </form>
+</div>
+
+<!-- [disabled]="!loginForm.valid"-->
