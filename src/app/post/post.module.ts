@@ -8,6 +8,7 @@ import { SharedModule } from '../shared/shared.module';
 import { PostRoutingModule } from './post-routing.module';
 import { PostService } from './post.service';
 import { PostEditComponent } from './post-edit.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { PostEditComponent } from './post-edit.component';
     PostRowComponent,
     PostViewComponent,
   ],
-  imports: [CommonModule, SharedModule, PostRoutingModule],
+  imports: [CommonModule, SharedModule, PostRoutingModule, ReactiveFormsModule],
   providers: [PostService],
 })
 export class PostModule {}

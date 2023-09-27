@@ -1,4 +1,7 @@
 <li [appHighlight]="'red'">
   {{ post.title }}
-  (<a routerLink="/post/view/{{ post.id }}">leggi</a>)
+  (<a routerLink="/post/view/{{ post.id }}">leggi</a>) - (<a
+    routerLink="/post/edit/{{ post.id }}"
+    >edit </a
+  >)
 </li>
