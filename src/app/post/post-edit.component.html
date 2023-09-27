@@ -1,5 +1,5 @@
 <div *ngIf="!loading">
-  <div [formGroup]="formGroup" (ngReset)="OnReset()" (ngSubmit)="OnSubmit()">
+  <form [formGroup]="formGroup" (ngSubmit)="OnSubmit()">
     <h2>Post Edit</h2>
 
     <label for="id">id: </label>
@@ -18,6 +18,8 @@
       MANDA TUTTO JACK; MANDA TUTTO
     </button>
     <BR />
-    <button type="reset">CI STANNO TRACCIANDO, CI STANNO TRACCIANDO</button>
-  </div>
+    <button (click)="OnReset()">
+      CI STANNO TRACCIANDO, CI STANNO TRACCIANDO
+    </button>
+  </form>
 </div>
